@@ -129,6 +129,44 @@ For the regeneration branch, the workflow also validates:
 
 Invalid rows are logged in the `Errors` sheet instead of stopping the full workflow execution. This allows valid rows to continue processing even when another row contains missing or incomplete information.
 
+## Testing
+
+The workflow was tested with 10 structured test cases covering both valid and invalid scenarios.
+
+The test matrix included:
+
+- Valid initial content generation
+- Missing required fields in the initial branch
+- Valid regeneration with feedback
+- Missing feedback in the regeneration branch
+- Missing previous draft in the regeneration branch
+- Validation of the new video-ready fields
+- Verification that content fields remain separated correctly
+
+The main fields tested were:
+
+- `goal`
+- `idea_seed`
+- `key_facts`
+- `feedback`
+- `generated_caption`
+
+Each test was documented with expected behaviour, actual result, status and issue found.
+
+## API Reliability
+
+Basic API resilience was added to both OpenAI HTTP Request nodes.
+
+The workflow uses retry logic to reduce the impact of temporary API failures or rate-limit issues.
+
+Current configuration:
+
+- Retry on Fail: enabled
+- Max tries: 3
+- Wait between tries: 3000 ms
+
+If the API still fails after the retry attempts, the execution stops. A future improvement would be to log these failed API attempts directly into the `Errors` sheet instead of stopping the execution.
+
 ## Google Sheets Structure
 
 The project uses a spreadsheet structure with tabs such as:
