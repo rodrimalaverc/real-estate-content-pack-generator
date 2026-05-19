@@ -71,6 +71,20 @@ flowchart TD
     N -->|rejected| P[Wait for feedback]
     N -->|review| P
 ```
+## Project Screenshots
+
+The repository includes visual documentation of the MVP in the `screenshots/` folder.
+
+Screenshots include:
+
+- n8n workflow overview
+- Google Sheets structure
+- generated output example
+- review flow example
+- testing matrix
+- error handling example
+
+See: [`screenshots/`](./screenshots)
 
 ## Input Fields
 
@@ -264,7 +278,7 @@ Current stage:
 - Review and regeneration flow completed
 - Error logging completed
 - Export structure created
-- GitHub documentation in progress
+- Screenshot documentation completed
 
 ## Author
 
