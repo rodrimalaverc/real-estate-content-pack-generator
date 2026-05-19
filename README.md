@@ -356,3 +356,6 @@ Screenshots and documentation are used to demonstrate the workflow structure and
 Created by Rodrigo Malaver.
 
 This project is part of my automation and AI portfolio, focused on building practical workflows using n8n, APIs, Google Sheets and AI tools.
+
+- LinkedIn: [Rodrigo Malaver](https://www.linkedin.com/in/helbert-rodrigo-malaver-casallas/)
+- Email: rodri.malaverc@gmail.com
